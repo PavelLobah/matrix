@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -lm
 VFLAGS = -Wall -Werror -Wextra -lm
 UNAME = $(shell uname)
+DATE = $(shell date -R)
 ifeq ($(UNAME), Linux)
 	CTEST = -lcheck -lpthread -lrt -lm -lsubunit --coverage
 else
